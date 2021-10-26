@@ -1,0 +1,118 @@
+$color_dark_gray: #304352;
+$color_dark_gray_2: #29323c;
+$color_light_gray: #eef2f3;
+$color_light_gray_2: #d7d2cc;
+$color_light_gray_3: #8e9eab;
+$color_light_gray_4: #485563;
+$color_purple: #6a3093;
+$color_purple_2: #a044ff;
+$color_purple_3: #6441a5;
+$color_light_purple: #fc00ff;
+$color_dark_purple: #2a0845;
+$color_deep_purple: #673ab7;
+$color_deep_purple_2: #512da8;
+$color_orange: #fd746c;
+$color_orange_2: #ff9068;
+$color_light_orange: #ffb75e;
+$color_light_orange_2: #ed8f03;
+$color_mastercard_orange: #f46b45;
+$color_mastercard_orange_2: #eea849;
+.navbar {
+  font-family: "Montserrat", sans-serif;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: $color_orange;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar_left {
+  margin-left: 20px;
+  font-size: 32px;
+  a {
+    color: white;
+  }
+}
+.navbar_center {
+  font-family: "Montserrat", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .navbar_center_title {
+    margin-right: 15px;
+    &:hover a {
+      transition: 0.2s ease all;
+      background-color: white;
+      color: $color_orange;
+      font-weight: bold;
+      // box-shadow: 0 1rem 0 -0.5rem rgba(255, 255, 255, 0.3);
+    }
+    a {
+      padding: 0.6rem 0.8rem;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  }
+}
+.navbar_right {
+  margin-right: 20px;
+  button {
+    outline: none;
+    background-color: white;
+    color: $color_orange;
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    transition: 0.2s ease all;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+@media (max-width: 500px) {
+  .navbar_left {
+    font-size: 1.4rem;
+  }
+  .navbar_center_title {
+    a {
+      font-size: 1rem !important;
+    }
+  }
+  .navbar_right {
+    button {
+      font-size: 1rem !important;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .navbar_left {
+    font-size: 1.1rem;
+    margin-left: 10px;
+  }
+  .navbar_center_title {
+    margin: 0;
+    a {
+      font-size: 0.8rem !important;
+    }
+  }
+  .navbar_right {
+    button {
+      font-size: 0.8rem !important;
+    }
+  }
+}

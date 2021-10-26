@@ -1,0 +1,97 @@
+$color_deep_purple_2: #512da8;
+$color_dark_gray: #304352;
+$color_dark_gray_2: #29323c;
+$color_light_gray: #eef2f3;
+$color_light_gray_2: #d7d2cc;
+$color_light_gray_3: #8e9eab;
+$color_light_gray_4: #485563;
+$color_orange: #fd746c;
+$color_orange_2: #ff9068;
+$color_light_orange: #ffb75e;
+$color_light_orange_2: #ed8f03;
+$color_mastercard_orange: #f46b45;
+$color_mastercard_orange_2: #eea849;
+.hero_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: bgChanger 20s ease infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+@keyframes bgChanger {
+  0% {
+    background: url("../images/room-1.jpeg");
+    background-size: cover;
+    object-fit: cover;
+  }
+  25% {
+    background: url("../images/room-2.jpeg");
+    background-size: cover;
+    object-fit: cover;
+  }
+  50% {
+    background: url("../images/room-3.jpeg");
+    background-size: cover;
+    object-fit: cover;
+  }
+  75% {
+    background: url("../images/room-4.jpeg");
+    background-size: cover;
+    object-fit: cover;
+  }
+  100% {
+    background: url("../images/room-1.jpeg");
+    background-size: cover;
+    object-fit: cover;
+  }
+}
+.image_container {
+  background-size: cover;
+  z-index: 10;
+  width: 80%;
+  height: 80%;
+
+  animation: bgChanger 20s ease infinite;
+}
+.hero_text {
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  bottom: 200px;
+  transform: translateX(-50%);
+  width: fit-content;
+  a {
+    transition: 0.2s linear all;
+    background: linear-gradient(70deg, $color_orange, $color_orange_2);
+    border: 2px solid transparent;
+    letter-spacing: 1px;
+    font-family: "Cinzel Decorative", cursive;
+    font-size: 24px;
+    border-radius: 12px;
+    padding: 0.8rem 1em;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 6px $color_light_orange_2;
+    opacity: 0.4;
+    width: fit-content;
+    &:hover {
+      box-shadow: 1px 1px 4px 1px $color_orange_2;
+      opacity: 1;
+    }
+  }
+}

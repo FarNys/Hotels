@@ -1,0 +1,98 @@
+$color_orange: #fd746c;
+$color_orange_2: #ff9068;
+$color_light_orange: #ffb75e;
+$color_light_orange_2: #ed8f03;
+$color_mastercard_orange: #f46b45;
+$color_mastercard_orange_2: #eea849;
+$color_dark_gray: #304352;
+$color_dark_gray_2: #29323c;
+$color_light_gray: #eef2f3;
+$color_light_gray_2: #d7d2cc;
+$color_light_gray_3: #8e9eab;
+$color_light_gray_4: #485563;
+.review_all_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px auto;
+  // background: linear-gradient(75deg, $color_orange, $color_orange_2);
+  h1 {
+    padding: 0.8rem;
+    position: relative;
+    font-size: 32px;
+    // font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: $color_orange;
+    border-bottom: 3px solid $color_orange;
+  }
+}
+.review_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.single_review {
+  display: flex;
+  width: 340px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+
+  .info_review {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    height: 100%;
+    transition: 0.2s ease all;
+
+    .info_review_left {
+      height: 100%;
+      img {
+        margin: 15px 0;
+        width: 80px;
+        object-fit: cover;
+        height: 80px;
+        border-radius: 12px;
+      }
+    }
+    .info_review_right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .review_name {
+        border-bottom: 2px solid $color_dark_gray;
+        transition: 0.2s ease all;
+      }
+      div {
+        padding: 5px;
+        transition: 0.2s ease all;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: 0 2px 4px $color_orange;
+    .info_review {
+      transition: 0.2s ease all;
+      background-color: $color_dark_gray;
+      color: #ddd;
+      .info_review_right {
+        .review_name {
+          border-bottom: 2px solid $color_orange;
+        }
+      }
+    }
+  }
+}
+.review_text {
+  padding: 12px 15px;
+  background-color: $color_dark_gray;
+  color: #ddd;
+}

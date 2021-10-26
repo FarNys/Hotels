@@ -1,0 +1,105 @@
+.footer_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+}
+
+.footer_container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(70deg, #304352, #29323c);
+  z-index: -1;
+  border-radius: 25% 25% 0 0 / 10% 10% 0 0;
+}
+
+.footer_column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.footer_column h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer_column a {
+  padding: 0.8rem 0.6rem;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  color: #fd746c;
+  font-size: 12px;
+}
+
+.footer_column a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  -webkit-transform: translateX(-105%);
+          transform: translateX(-105%);
+}
+
+.footer_column a:hover {
+  color: white;
+}
+
+.footer_column a:hover::before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.footer_sub_container {
+  max-width: 600px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 40px;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .footer_sub_container {
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

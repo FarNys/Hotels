@@ -1,0 +1,25 @@
+$color_orange: #fd746c;
+$color_orange_2: #ff9068;
+$color_light_orange: #ffb75e;
+$color_light_orange_2: #ed8f03;
+$color_mastercard_orange: #f46b45;
+$color_mastercard_orange_2: #eea849;
+.luxroy_room_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.top_luxory_room {
+  margin-top: 100px;
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    // font-weight: bolder;
+    padding: 16px 25px;
+    border-radius: 12px;
+    background-color: $color_orange_2;
+    color: white;
+  }
+}

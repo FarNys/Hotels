@@ -1,0 +1,118 @@
+.navbar {
+  font-family: "Montserrat", sans-serif;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fd746c;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar_left {
+  margin-left: 20px;
+  font-size: 32px;
+}
+
+.navbar_left a {
+  color: white;
+}
+
+.navbar_center {
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar_center .navbar_center_title {
+  margin-right: 15px;
+}
+
+.navbar_center .navbar_center_title:hover a {
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  background-color: white;
+  color: #fd746c;
+  font-weight: bold;
+}
+
+.navbar_center .navbar_center_title a {
+  padding: 0.6rem 0.8rem;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar_right {
+  margin-right: 20px;
+}
+
+.navbar_right button {
+  outline: none;
+  background-color: white;
+  color: #fd746c;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 18px;
+  border: 1px solid transparent;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.navbar_right button:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.navbar_right button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+@media (max-width: 500px) {
+  .navbar_left {
+    font-size: 1.4rem;
+  }
+  .navbar_center_title a {
+    font-size: 1rem !important;
+  }
+  .navbar_right button {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar_left {
+    font-size: 1.1rem;
+    margin-left: 10px;
+  }
+  .navbar_center_title {
+    margin: 0;
+  }
+  .navbar_center_title a {
+    font-size: 0.8rem !important;
+  }
+  .navbar_right button {
+    font-size: 0.8rem !important;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

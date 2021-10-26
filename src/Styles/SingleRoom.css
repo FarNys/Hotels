@@ -1,0 +1,211 @@
+.singleroom_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.selected_room {
+  margin: 50px auto;
+  margin-top: 70px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.img_singleroom {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  margin: 10px 10px;
+  max-width: 90%;
+  min-width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.img_singleroom img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.singleroom_alldata {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  background-image: url("../images/beach.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 10px;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  max-width: 90%;
+  min-width: 700px;
+}
+
+.singleroom_alldata:first-child {
+  color: red !important;
+}
+
+.singleroom_data {
+  background: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.singleroom_data div {
+  margin: 5px;
+  position: relative;
+  margin-right: 10px;
+  padding: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.singleroom_data div:first-child {
+  color: #ff9068;
+  font-size: 20px;
+}
+
+.singleroom_data div:last-child {
+  color: white;
+  line-height: 1.6rem;
+}
+
+.singleroom_data div li {
+  list-style: none;
+  line-height: 1.7rem;
+}
+
+.singleroom_data::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 3px;
+  background-color: #ff9068;
+  top: 100%;
+  left: 45%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.singleroom_data:last-child::before {
+  content: "";
+  display: none;
+}
+
+.singleroom_info {
+  width: 15% !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  color: #ff9068;
+  font-weight: bold;
+}
+
+.same_room {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.single_room_title {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(60deg, #ffb75e, #ff9068, #f46b45);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 30px;
+}
+
+.back_to_home {
+  margin: 50px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.back_to_home a {
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  font-size: 22px;
+  border: 12px;
+  background: linear-gradient(60deg, #ffb75e, #ff9068, #f46b45);
+}
+
+@media (max-width: 800px) {
+  .img_singleroom {
+    min-width: 95%;
+  }
+  .singleroom_alldata {
+    min-width: 95%;
+  }
+}
+
+.singleroom_container.initial .selected_room .img_singleroom {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.singleroom_container.initial .selected_room .singleroom_alldata {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+/*# sourceMappingURL=SingleRoom.css.map */

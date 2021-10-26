@@ -1,0 +1,384 @@
+$color_orange: #fd746c;
+$color_orange_2: #ff9068;
+$color_light_orange: #ffb75e;
+$color_light_orange_2: #ed8f03;
+$color_mastercard_orange: #f46b45;
+$color_mastercard_orange_2: #eea849;
+
+$color_purple: #6a3093;
+$color_purple_2: #a044ff;
+$color_purple_3: #6441a5;
+$color_light_purple: #fc00ff;
+$color_dark_purple: #2a0845;
+$color_deep_purple: #673ab7;
+$color_deep_purple_2: #512da8;
+
+$color_sky_blue: #005c97;
+$color_sky_blue_2: #363795;
+$color_blue: #457fca;
+$color_blue_2: #5691c8;
+$color_light_blue: #00c9ff;
+$color_light_blue_2: #00dbde;
+$color_night_blue: #2c3e50;
+$color_night_blue_2: #3498db;
+
+$color_pink: #b24592;
+$color_pink_2: #f15f79;
+$color_pink_3: #ee9ca7;
+$color_pink_4: #ffdde1;
+$color_pink_5: #ff0084;
+
+$color_sun: #c02425;
+$color_sun_2: #f0cb35;
+
+$color_zereshki: #403a3e;
+$color_zereshki_2: #be5869;
+$color_zereshki_3: #870000;
+$color_dark_zereshki: #190a05;
+
+$color_red: #8e0e00;
+$color_hot_red: #e53935;
+$color_hot_red_2: #e35d5b;
+$color_hot_red_3: #dc2430;
+$color_dark_red: #8e0e00;
+
+$color_green: #6a9113;
+$color_green_2: #00bf8f;
+$color_light_green: #92fe9d;
+$color_light_green_2: #24fe41;
+$color_dark_green: #141517;
+$color_dark_green_2: #001510;
+$color_leaf_green: #76b852;
+$color_leaf_green: #8dc26f;
+
+$color_dark_gray: #304352;
+$color_dark_gray_2: #29323c;
+$color_light_gray: #eef2f3;
+$color_light_gray_2: #d7d2cc;
+$color_light_gray_3: #8e9eab;
+$color_light_gray_4: #485563;
+
+.rooms_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  .svg_container {
+    position: relative;
+    width: 100%;
+    // height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        35deg,
+        $color_light_gray_4,
+        $color_dark_gray_2
+      );
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 20%;
+      clip-path: polygon(0 100%, 50% 50%, 100% 0, 100% 100%, 0 100%);
+      background-color: white;
+    }
+    .left_side_book {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 1;
+      padding: 50px 0;
+      margin-top: 20px;
+      max-width: 320px;
+
+      .left_side_carousel {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        width: 350px;
+        height: 250px;
+        border: 2px solid $color_orange;
+
+        .inner_carousel {
+          display: flex;
+          justify-content: flex-start;
+          width: 100%;
+          transition: 0.3s ease all;
+        }
+        img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+        }
+      }
+
+      .image_changer_container {
+        margin-top: 10px;
+        button {
+          margin-right: 5px;
+          padding: 3px;
+          background-color: $color_dark_gray;
+          border: 2px solid $color_orange;
+          border-radius: 50%;
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+        }
+
+        .btn_active {
+          background-color: $color_orange;
+          border-color: white;
+        }
+      }
+    }
+    .right_side_book {
+      z-index: 1;
+      padding: 30px 0;
+      margin-bottom: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 320px;
+
+      h1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 40px;
+        // min-width: 340px;
+        z-index: 100;
+        color: $color_orange;
+      }
+    }
+  }
+}
+.filter_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100px;
+  width: 90%;
+  max-width: 400px;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px 0px $color_dark_gray;
+  form {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 100%;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+    margin-right: 20px;
+    font-family: "Montserrat", sans-serif;
+
+    input {
+      position: absolute;
+      top: 80%;
+      width: 200px;
+      left: 50px;
+      margin-top: 40px;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: linear-gradient(
+        90deg,
+        $color_orange_2,
+        $color_orange,
+        $color_mastercard_orange
+      );
+      border-radius: 8px;
+    }
+    span {
+      position: absolute;
+      left: var(--pricePos);
+      top: 60%;
+      font-size: 15px;
+      margin-top: 20px;
+    }
+
+    label {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    select {
+      padding: 5px;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid $color_orange;
+      font-size: 16px;
+      width: 100px;
+      option {
+        border: none;
+        font-size: 13px;
+        background-color: $color_orange;
+        &:hover {
+          background-color: white;
+        }
+      }
+    }
+  }
+  .check_form {
+    border-top: 2px solid $color_dark_gray;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  .range_btn {
+    opacity: 0.9;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: $color_mastercard_orange;
+    color: white;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+}
+.allrooms_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.theroom_container {
+  position: relative;
+  min-width: 340px;
+  max-width: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex: 1;
+  margin: 20px 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  &:hover .down_room_data {
+    transform: translateY(0);
+  }
+  &:hover {
+    box-shadow: 2px 1px 8px $color_orange;
+  }
+  &:hover {
+    .up_room_data {
+      img {
+        transition: 0.3s ease transform;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  animation-name: room_scale;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+@keyframes room_scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.up_room_data {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  img {
+    transition: 0.3s ease transform;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: no-repeat;
+  }
+}
+.down_room_data {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  color: white;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  transform: translateY(100%);
+  transition: 0.5s ease transform;
+  font-weight: bold;
+}
+.sub_down_room {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 1rem;
+
+  div {
+    margin-right: 10px;
+  }
+}
+.sub_down_room:last-child {
+  padding: 0;
+  margin-left: 0;
+  width: 100%;
+  a {
+    transition: 0.2s ease all;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    // padding: 1rem;
+    &:hover {
+      width: 100%;
+      background-color: $color_orange;
+      color: white;
+    }
+  }
+}
+.sub_down_room {
+  div:first-child {
+    color: $color_orange;
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,99 @@
+$color_purple: #6a3093;
+$color_purple_2: #a044ff;
+$color_purple_3: #6441a5;
+$color_light_purple: #fc00ff;
+$color_dark_purple: #2a0845;
+$color_deep_purple: #673ab7;
+$color_deep_purple_2: #512da8;
+$color_green: #6a9113;
+$color_leaf_green: #8dc26f;
+$color_green_2: #00bf8f;
+$color_light_green: #92fe9d;
+$color_light_green_2: #24fe41;
+$color_orange: #fd746c;
+$color_orange_2: #ff9068;
+$color_light_orange: #ffb75e;
+$color_light_orange_2: #ed8f03;
+$color_mastercard_orange: #f46b45;
+$color_mastercard_orange_2: #eea849;
+$color_dark_gray: #304352;
+$color_dark_gray_2: #29323c;
+$color_light_gray: #eef2f3;
+$color_light_gray_2: #d7d2cc;
+$color_light_gray_3: #8e9eab;
+$color_light_gray_4: #485563;
+
+.info_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto;
+  // background: linear-gradient(75deg, $color_orange, $color_orange_2);
+  h1 {
+    padding: 0.8rem;
+    position: relative;
+    font-size: 32px;
+    // font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: $color_orange;
+    border-bottom: 3px solid $color_orange;
+  }
+}
+.items_container {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+.text_container {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 320px;
+  font-size: 34px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  color: white;
+  h3 {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    border-bottom: 2px solid $color_dark_gray;
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+  }
+  p {
+    padding: 0 1rem;
+    font-size: 18px;
+    line-height: 1.7rem;
+  }
+}
+.text_container:nth-of-type(even) {
+  background: linear-gradient(
+    35deg,
+    $color_orange,
+    $color_orange_2,
+    $color_light_orange_2
+  );
+  color: $color_dark_gray_2;
+  &:hover {
+    box-shadow: 0 2px 4px $color_dark_gray, 0 4px 12px $color_dark_gray;
+  }
+}
+.icon {
+  margin-top: 20px;
+}
+.text_container:nth-of-type(odd) {
+  background: linear-gradient(35deg, $color_dark_gray, $color_dark_gray_2);
+  color: $color_orange_2;
+  h3 {
+    border-bottom: 2px solid $color_orange_2;
+  }
+  &:hover {
+    box-shadow: 0 2px 4px $color_orange, 0 4px 12px $color_orange;
+  }
+}
