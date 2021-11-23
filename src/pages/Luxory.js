@@ -3,6 +3,9 @@ import { GlobalContext } from "../Context";
 import "../Styles/Luxory.css";
 import TheRoom from "../components/TheRoom";
 const Luxory = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const myData = useContext(GlobalContext);
 
   const [luxoryRoom, setluxoryRoom] = useState([]);

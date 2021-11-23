@@ -2,18 +2,59 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 import { GlobalContext } from "../Context";
 import "../Styles/Rooms.css";
 import TheRoom from "../components/TheRoom";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const Rooms = () => {
-  const carouselRef = useRef(null);
-  const btnsRef = useRef(null);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    // appendDots: (dots) => (
+    //   <div
+    //     style={{
+    //       backgroundColor: "#ddd",
+    //       borderRadius: "10px",
+    //       padding: "10px",
+    //       // display: "none",
+    //       background: "transparent",
+    //       top: "100%",
+    //       transform: "translateX(-8%)",
+    //       left: "0%",
+    //     }}
+    //   >
+    //     <ul style={{ margin: "0px" }}> {dots} </ul>
+    //   </div>
+    // ),
+    // customPaging: (i) => (
+    //   <div
+    //     style={{
+    //       width: "10px",
+    //       height: "10px",
+    //       borderRadius: "50%",
+    //       // color: "#fd746c",
+    //       border: "1px #fd746c solid",
+    //       padding: "1px",
+    //     }}
+    //   ></div>
+    // ),
+  };
+  // const carouselRef = useRef(null);
+  // const btnsRef = useRef(null);
+  // let carouselIndex = 0;
 
-  let carouselIndex = 0;
   const { allData } = useContext(GlobalContext);
   const [filteredData, setFilteredData] = useState(allData);
   const priceRange = allData.sort((a, b) => a.fields.price - b.fields.price);
   const priceMin = priceRange[0].fields.price;
   const priceMax = priceRange[priceRange.length - 1].fields.price;
-  const [input, setinput] = useState(priceMin);
+  const [input, setinput] = useState(350);
   const [type, settype] = useState("all");
   const [showMessage, setshowMessage] = useState(false);
   document.documentElement.style.setProperty(
@@ -58,57 +99,46 @@ const Rooms = () => {
       setshowMessage(true);
     }
   }, [filteredData]);
-  // const intervaling = () => {
-  //   carouselIndex++;
-  //   if (carouselIndex > 2) {
-  //     carouselIndex = 0;
-  //   }
-  //   console.log(btnsRef.current.childNodes);
-  //   const refs = btnsRef.current.childNodes;
-  //   if (carouselRef.current !== null) {
-  //     if (refs.length > 0) {
-  //       carouselRef.current.style.transform = `translateX(${
-  //         carouselIndex * -350
-  //       }px)`;
-  //       for (let j = 0; j < refs.length; j++) {
-  //         refs[j].classList.remove("btn_active");
-  //       }
-  //       refs[carouselIndex].classList.add("btn_active");
-  //     }
-  //   }
-  // };
-  // const checkInterval = () => {
-  //   setInterval(() => {
-  //     intervaling();
-  //   }, 4500);
-  // };
-  // checkInterval();
 
-  const slideHandlers = (e) => {
-    e.preventDefault();
-    carouselIndex = e.target.getAttribute("data-index");
-    carouselRef.current.style.transform = `translateX(${
-      carouselIndex * -350
-    }px)`;
-    const refs = btnsRef.current.childNodes;
-    for (let i = 0; i < refs.length; i++) {
-      refs[i].classList.remove("btn_active");
-    }
-    refs[carouselIndex].classList.add("btn_active");
-  };
+  // const slideHandlers = (e) => {
+  //   e.preventDefault();
+  //   carouselIndex = e.target.getAttribute("data-index");
+  //   carouselRef.current.style.transform = `translateX(${
+  //     carouselIndex * -350
+  //   }px)`;
+  //   const refs = btnsRef.current.childNodes;
+  //   for (let i = 0; i < refs.length; i++) {
+  //     refs[i].classList.remove("btn_active");
+  //   }
+  //   refs[carouselIndex].classList.add("btn_active");
+  // };
 
   return (
     <div className="rooms_container">
       <div className="svg_container">
         <div className="left_side_book">
           <div className="left_side_carousel">
-            <div className="inner_carousel" ref={carouselRef}>
+            {/* <div className="inner_carousel" ref={carouselRef}>
               <img src="../images/hotel_1.jpg" alt="hotel_pic_1" />
               <img src="../images/hotel_1.jpg" alt="hotel_pic_2" />
               <img src="../images/hotel_1.jpg" alt="hotel_pic_3" />
-            </div>
+            </div> */}
+            <Slider {...settings}>
+              <div>
+                <img src="/images/room-1.jpeg" alt="" />
+              </div>
+              <div>
+                <img src="/images/room-4.jpeg" alt="" />
+              </div>
+              <div>
+                <img src="/images/room-7.jpeg" alt="" />
+              </div>
+              <div>
+                <img src="/images/room-9.jpeg" alt="" />
+              </div>
+            </Slider>
           </div>
-          <div className="image_changer_container" ref={btnsRef}>
+          {/* <div className="image_changer_container" ref={btnsRef}>
             <button
               className="btn_active"
               onClick={slideHandlers}
@@ -116,7 +146,7 @@ const Rooms = () => {
             ></button>
             <button onClick={slideHandlers} data-index="1"></button>
             <button onClick={slideHandlers} data-index="2"></button>
-          </div>
+          </div> */}
         </div>
         <div className="right_side_book">
           <h1>Choose Your Desired Room</h1>
@@ -132,7 +162,7 @@ const Rooms = () => {
             type="range"
             min={priceMin}
             max={priceMax}
-            initial={100}
+            // initial={350}
             onChange={inputHandler}
             step="50"
             value={inputRef.current.value}

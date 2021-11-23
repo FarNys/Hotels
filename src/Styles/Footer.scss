@@ -6,13 +6,18 @@ $color_mastercard_orange: #f46b45;
 $color_mastercard_orange_2: #eea849;
 $color_dark_gray: #304352;
 $color_dark_gray_2: #29323c;
+.foonter_box_container {
+  position: relative;
+  min-height: calc(100vh - 350px);
+}
 .footer_container {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-  margin-top: 40px;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  // overflow: hidden;
   &::before {
     content: "";
     position: absolute;

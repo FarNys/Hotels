@@ -1,0 +1,124 @@
+$color_dark_gray: #304352;
+$color_dark_gray_2: #29323c;
+$color_light_gray: #eef2f3;
+$color_light_gray_2: #d7d2cc;
+$color_light_gray_3: #8e9eab;
+$color_light_gray_4: #485563;
+$color_orange: #fd746c;
+$color_orange_2: #ff9068;
+$color_light_orange: #ffb75e;
+$color_light_orange_2: #ed8f03;
+$color_mastercard_orange: #f46b45;
+$color_mastercard_orange_2: #eea849;
+.connect_page_container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 250px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.form_container {
+  margin: 100px auto;
+  max-width: 400px;
+  width: 90%;
+  // min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px $color_orange;
+  .choose_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    background-color: $color_dark_gray;
+    div {
+      flex: 1;
+      text-align: center;
+      padding: 15px;
+      color: #fd746c;
+      font-size: 17px;
+      letter-spacing: 0.7px;
+      &:hover {
+        background-color: $color_orange;
+        color: $color_dark_gray;
+        cursor: pointer;
+      }
+    }
+    .choose_signIn {
+      border-right: 2px solid $color_orange;
+    }
+  }
+}
+.signIn_form {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  background: url("../images/bgImage.jpg");
+  background-position: center;
+  h2 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0 0 0;
+    margin-top: 10px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: auto;
+    width: 100%;
+    padding: 40px;
+    label {
+      margin-top: 20px;
+      color: $color_orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .icon_for_label {
+        margin-right: 5px;
+      }
+    }
+    input {
+      margin-top: 5px;
+      width: 100%;
+      padding: 8px 12px;
+      border-radius: 16px;
+      outline: none;
+      font-size: 16px;
+      border: 2px solid transparent;
+      &:focus {
+        border: 2px solid $color_orange;
+      }
+    }
+    button {
+      margin-top: 40px;
+      width: 100%;
+      padding: 12px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bolder;
+      font-size: 18px;
+      background-color: transparent;
+      border: 2px solid $color_orange;
+      outline: none;
+      border-radius: 24px;
+      color: $color_orange;
+      &:hover {
+        background-color: $color_orange;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

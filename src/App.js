@@ -8,6 +8,7 @@ import SingleRoom from "./pages/SingleRoom";
 import Footer from "./components/Footer";
 import Luxory from "./pages/Luxory";
 import Page404 from "./pages/Page404";
+import ConnectPage from "./components/ConnectPage";
 
 const App = () => {
   return (
@@ -25,6 +26,9 @@ const App = () => {
         </Route>
         <Route path="/luxory">
           <Luxory />
+        </Route>
+        <Route path="/connect">
+          <ConnectPage />
         </Route>
         <Route path="*">
           <Page404 />

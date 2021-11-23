@@ -75,6 +75,7 @@ $color_light_gray_4: #485563;
     align-items: center;
     flex-wrap: wrap;
     margin: 20px 0;
+    padding: 30px 0;
     &::before {
       content: "";
       position: absolute;
@@ -92,7 +93,7 @@ $color_light_gray_4: #485563;
       left: 0;
       bottom: 0;
       width: 100%;
-      height: 20%;
+      height: 15%;
       clip-path: polygon(0 100%, 50% 50%, 100% 0, 100% 100%, 0 100%);
       background-color: white;
     }
@@ -104,29 +105,41 @@ $color_light_gray_4: #485563;
       z-index: 1;
       padding: 50px 0;
       margin-top: 20px;
-      max-width: 320px;
-
+      flex: 1;
       .left_side_carousel {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-        width: 350px;
-        height: 250px;
-        border: 2px solid $color_orange;
+        width: 500px;
+        // height: 250px;
+        aspect-ratio: 2;
+        border: 1px solid $color_orange;
+        div {
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        // display: flex;
+        // justify-content: flex-start;
+        // align-items: center;
+        // position: relative;
+        // overflow: hidden;
+        // width: 350px;
+        // height: 250px;
+        // border: 2px solid $color_orange;
 
-        .inner_carousel {
-          display: flex;
-          justify-content: flex-start;
-          width: 100%;
-          transition: 0.3s ease all;
-        }
-        img {
-          width: 100%;
-          height: 250px;
-          object-fit: cover;
-        }
+        // .inner_carousel {
+        //   display: flex;
+        //   justify-content: flex-start;
+        //   width: 100%;
+        //   transition: 0.3s ease all;
+        // }
+        // img {
+        //   width: 100%;
+        //   height: 250px;
+        //   object-fit: cover;
+        // }
       }
 
       .image_changer_container {
@@ -156,7 +169,7 @@ $color_light_gray_4: #485563;
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 320px;
+      flex: 1;
 
       h1 {
         display: flex;
@@ -382,3 +395,18 @@ $color_light_gray_4: #485563;
     font-size: 28px;
   }
 }
+@media (max-width: 1150px) {
+  .svg_container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 650px) {
+  .svg_container {
+    flex-direction: column;
+    .left_side_carousel {
+      width: 320px !important;
+    }
+  }
+}
+// @media (max-width: 600px) {
+// }
