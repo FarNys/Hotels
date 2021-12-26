@@ -82,10 +82,6 @@
   min-width: 700px;
 }
 
-.singleroom_alldata:first-child {
-  color: red !important;
-}
-
 .singleroom_data {
   background: rgba(0, 0, 0, 0.7);
   display: -webkit-box;
@@ -101,28 +97,31 @@
   position: relative;
 }
 
-.singleroom_data div {
+.singleroom_data > div {
   margin: 5px;
   position: relative;
   margin-right: 10px;
   padding: 0.7rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.singleroom_data div:first-child {
+.singleroom_data > div:first-child {
   color: #ff9068;
   font-size: 20px;
 }
 
-.singleroom_data div:last-child {
+.singleroom_data > div:last-child {
   color: white;
   line-height: 1.6rem;
 }
 
-.singleroom_data div li {
+.singleroom_data > div li {
   list-style: none;
   line-height: 1.7rem;
 }
@@ -147,10 +146,15 @@
 }
 
 .singleroom_info {
-  width: 15% !important;
+  width: 100px !important;
   font-family: Arial, Helvetica, sans-serif !important;
   color: #ff9068;
   font-weight: bold;
+  margin-left: 20px;
+}
+
+.singleroom_feature {
+  display: block !important;
 }
 
 .same_room {
@@ -218,5 +222,14 @@
 .singleroom_container.initial .selected_room .singleroom_alldata {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+}
+
+@media (max-width: 650px) {
+  .singleroom_data {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=SingleRoom.css.map */

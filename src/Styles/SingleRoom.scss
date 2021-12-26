@@ -57,9 +57,9 @@ $color_mastercard_orange_2: #eea849;
   flex: 0.5;
   max-width: 90%;
   min-width: 700px;
-  &:first-child {
-    color: red !important;
-  }
+  // &:first-child {
+  //   color: red !important;
+  // }
 }
 .singleroom_data {
   background: rgba(0, 0, 0, 0.7);
@@ -68,13 +68,14 @@ $color_mastercard_orange_2: #eea849;
   align-items: flex-start;
   width: 100%;
   position: relative;
-  div {
+  > div {
     margin: 5px;
     position: relative;
     margin-right: 10px;
     padding: 0.7rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif !important;
     width: fit-content;
+    display: flex;
     &:first-child {
       color: $color_orange_2;
       font-size: 20px;
@@ -108,10 +109,14 @@ $color_mastercard_orange_2: #eea849;
   }
 }
 .singleroom_info {
-  width: 15% !important;
+  width: 100px !important;
   font-family: Arial, Helvetica, sans-serif !important;
   color: $color_orange_2;
   font-weight: bold;
+  margin-left: 20px;
+}
+.singleroom_feature {
+  display: block !important;
 }
 .same_room {
   margin-top: 20px;
@@ -181,5 +186,10 @@ $color_mastercard_orange_2: #eea849;
     .singleroom_alldata {
       transform: translateX(+100%);
     }
+  }
+}
+@media (max-width: 650px) {
+  .singleroom_data {
+    flex-direction: column;
   }
 }

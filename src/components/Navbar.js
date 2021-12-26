@@ -1,13 +1,15 @@
 import React from "react";
 import { AiFillAliwangwang } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { FaHotel } from "react-icons/fa";
+
 import "../Styles/Navbar.css";
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar_left">
         <Link to="/">
-          <AiFillAliwangwang />
+          <FaHotel />
         </Link>
       </div>
       <div className="navbar_center">

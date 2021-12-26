@@ -14,7 +14,7 @@ const Luxory = () => {
       myData.allData.filter((el) => el.fields.type === "presidential")
     );
   }, [myData]);
-  console.log(luxoryRoom);
+  // console.log(luxoryRoom);
   return (
     <div className="luxroy_room_container">
       <div className="top_luxory_room">

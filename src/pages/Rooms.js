@@ -16,38 +16,7 @@ const Rooms = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    // appendDots: (dots) => (
-    //   <div
-    //     style={{
-    //       backgroundColor: "#ddd",
-    //       borderRadius: "10px",
-    //       padding: "10px",
-    //       // display: "none",
-    //       background: "transparent",
-    //       top: "100%",
-    //       transform: "translateX(-8%)",
-    //       left: "0%",
-    //     }}
-    //   >
-    //     <ul style={{ margin: "0px" }}> {dots} </ul>
-    //   </div>
-    // ),
-    // customPaging: (i) => (
-    //   <div
-    //     style={{
-    //       width: "10px",
-    //       height: "10px",
-    //       borderRadius: "50%",
-    //       // color: "#fd746c",
-    //       border: "1px #fd746c solid",
-    //       padding: "1px",
-    //     }}
-    //   ></div>
-    // ),
   };
-  // const carouselRef = useRef(null);
-  // const btnsRef = useRef(null);
-  // let carouselIndex = 0;
 
   const { allData } = useContext(GlobalContext);
   const [filteredData, setFilteredData] = useState(allData);

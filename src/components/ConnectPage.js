@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import "../Styles/ConnectPage.css";
-import { FaUserEdit } from "react-icons/fa";
-import { GrMail } from "react-icons/gr";
-import { RiLockPasswordFill } from "react-icons/ri";
+
 import SignIn from "../components/SignIn";
 import SignUp from "../components/SignUp";
 const ConnectPage = () => {
   const [index, setindex] = useState(0);
   const [comp, setcomp] = useState([<SignIn />, <SignUp />]);
-  console.log(index[0]);
+  // console.log(index[0]);
   return (
     <div className="connect_page_container">
       <div className="form_container">

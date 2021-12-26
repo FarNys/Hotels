@@ -8,14 +8,16 @@ $color_dark_gray: #304352;
 $color_dark_gray_2: #29323c;
 .foonter_box_container {
   position: relative;
-  min-height: calc(100vh - 350px);
+  // min-height: calc(20vh + 200px);
+  // background-color: red;
 }
 .footer_container {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-  position: absolute;
+  // position: absolute;
   bottom: 0;
   // overflow: hidden;
   &::before {

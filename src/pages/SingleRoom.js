@@ -18,24 +18,15 @@ import Fade from "react-reveal/Fade";
 import { BsCheckLg } from "react-icons/bs";
 
 const SingleRoom = () => {
-  // const [styles, setstyles] = useState(false);
   let x, y, singleData;
-  // useEffect(() => {
-  //   setstyles(true);
-  // }, []);
-  // const styleChanger = () => {
-  //   setstyles(false);
-  //   setTimeout(() => {
-  //     setstyles(true);
-  //   }, 500);
-  // };
+
   const { allData } = useContext(GlobalContext);
   const { id } = useParams();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
   const filteredData = allData.filter((el) => el.sys.id === id);
-  console.log(filteredData, id);
+  // console.log(filteredData, id);
   if (filteredData.length > 0) {
     x = allData.filter(
       (item) => item.fields.type === filteredData[0].fields.type
@@ -71,15 +62,15 @@ const SingleRoom = () => {
               <div className="singleroom_data">
                 <div>
                   <FaHotel />
+                  <div className="singleroom_info">Type</div>
                 </div>
-                <div className="singleroom_info">Name</div>
                 <div>{singleData.fields.name}</div>
               </div>
               <div className="singleroom_data">
                 <div>
                   <MdFreeBreakfast />
+                  <div className="singleroom_info">Breakfast</div>
                 </div>
-                <div className="singleroom_info">Breakfast</div>
                 <div>{singleData.fields.breakfast ? "No" : "Yes"}</div>
               </div>
               <div className="singleroom_data">
@@ -89,52 +80,52 @@ const SingleRoom = () => {
                   ) : (
                     <BsFillPersonFill />
                   )}
+                  <div className="singleroom_info">Capacity</div>
                 </div>
-                <div className="singleroom_info">Capacity</div>
                 <div>{singleData.fields.capacity}</div>
               </div>
               <div className="singleroom_data">
                 <div>
                   <MdDescription />
+                  <div className="singleroom_info">Description</div>
                 </div>
-                <div className="singleroom_info">Description</div>
                 <div>{singleData.fields.description}</div>
               </div>
               <div className="singleroom_data">
                 <div>
                   <MdPets />
+                  <div className="singleroom_info">Pets Allowed</div>
                 </div>
-                <div className="singleroom_info">Pets Allowed</div>
                 <div>{singleData.fields.pets ? "Yes" : "No"}</div>
               </div>
               <div className="singleroom_data">
                 <div>
                   <FaHome />
+                  <div className="singleroom_info">Size</div>
                 </div>
-                <div className="singleroom_info">Size</div>
                 <div>{singleData.fields.size} m x m</div>
               </div>
               <div className="singleroom_data">
                 <div>
                   <GiPriceTag />
+                  <div className="singleroom_info">Price</div>
                 </div>
-                <div className="singleroom_info">Price</div>
                 <div>{singleData.fields.price} $</div>
               </div>
               <div className="singleroom_data">
                 <div>
                   <FaUmbrellaBeach />
+                  <div className="singleroom_info ">Features</div>
                 </div>
-                <div className="singleroom_info">Properties</div>
-                <div>
-                  {singleData.fields.extras.map((el) => {
+                <div className="singleroom_feature">
+                  {singleData.fields.extras.map((el, id) => {
                     return (
-                      <>
+                      <div key={id}>
                         <li>
                           <BsCheckLg className="icon_check" />
                           {el}
                         </li>
-                      </>
+                      </div>
                     );
                   })}
                 </div>
