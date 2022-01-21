@@ -275,6 +275,7 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 50px auto;
 }
 
 .theroom_container {
@@ -451,6 +452,10 @@
 .sub_down_room div:first-child {
   color: #fd746c;
   font-size: 28px;
+}
+
+.showMessage_container {
+  margin: 50px auto;
 }
 
 @media (max-width: 1150px) {
